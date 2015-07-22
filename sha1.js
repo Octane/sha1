@@ -42,7 +42,7 @@ var sha1 = new function () {
 
     function getSha1HexadecimalString(arrayBuffer) {
         activeItem.startSha1();
-        return crypto.subtle.digest('SHA-1', arrayBuffer).then(onFulfilled, onRejected);
+        return (crypto.subtle || crypto.webkitSubtle).digest('SHA-1', arrayBuffer).then(onFulfilled, onRejected);
     }
 
     function Deferred() {
