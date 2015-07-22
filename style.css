@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background: #fff;
+    font: 16px/1 Menlo, Consolas, monospace;
+    color: #333;
+}
+
+.drop-zone {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.drop-zone:after {
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+    content: "\a0";
+}
+
+.drop-zone__text {
+    vertical-align: middle;
+}
+
+.results {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    padding: 20px;
+}
+
+.file {
+    margin-bottom: 20px;
+}
+
+.file__name,
+.file__sha1 {
+    display: block;
+    overflow: hidden;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.file__sha1 {
+    color: #3cf;
+}
+
+.file__error {
+    color: #f3c;
+}
+
+.file__size,
+.file__time,
+.file__read-time,
+.file__sha1-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.file__time {
+    font-weight: bold;
+}
